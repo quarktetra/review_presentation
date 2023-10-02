@@ -1,0 +1,8 @@
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+
+#refs{text-align:left}
+.csl-entry{padding-bottom:5px}
+

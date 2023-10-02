@@ -1,0 +1,250 @@
+<html>
+<body>
+<script src="./jsfiles/math602.js"></script>
+<script src="./jsfiles/urlQuery2022.js"></script>
+
+<script src="./jsfiles/vis.js"></script>
+<script src="./jsfiles/jquery-1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/cr-1.5.4/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/cr-1.5.4/datatables.min.js"></script>
+
+
+<script type="text/javascript" src="jsfiles/tooltipster.bundle.min_mod.js"></script>
+<script src="./jsfiles/jquery.csv.min.js"></script>
+
+<script src="./jsfiles/nouislider.min.js"></script>
+<script src="./utilityfiles/JSfunctions.js"></script>
+<script src="./utilityfiles/runGenPlots.js"></script>
+
+
+
+<script src="./jsfiles/wNumb.js"></script>
+
+
+<link rel="stylesheet" href="./css/nouislider.min.css"/> 
+
+<style>
+   .modebar-btn .icon path {
+   fill: gray!important
+   
+}
+
+.icon:hover {
+  transform: scale(1.35);
+}
+.icon {
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+}
+
+</style>
+<script> 
+spice1008cs= [{"Page":2,"Table":1,"Part number":"1008CS-100","R1(ohms)":8,"R2(ohms)":0.1,"C (pF)":0.065,"L (nH)":9.8,"k":0,"Upper\\nlimit\\n(MHz)":6700},{"Page":2,"Table":1,"Part number":"1008CS-120","R1(ohms)":7,"R2(ohms)":0.1,"C (pF)":0.1,"L (nH)":12,"k":0,"Upper\\nlimit\\n(MHz)":4900},{"Page":2,"Table":1,"Part number":"1008CS-150","R1(ohms)":7,"R2(ohms)":0.1,"C (pF)":0.153,"L (nH)":15,"k":0,"Upper\\nlimit\\n(MHz)":3700},{"Page":2,"Table":1,"Part number":"1008CS-180","R1(ohms)":7,"R2(ohms)":0.1,"C (pF)":0.083,"L (nH)":18,"k":0,"Upper\\nlimit\\n(MHz)":4600},{"Page":2,"Table":1,"Part number":"1008CS-220","R1(ohms)":8,"R2(ohms)":0.1,"C (pF)":0.124,"L (nH)":22,"k":0,"Upper\\nlimit\\n(MHz)":3400},{"Page":2,"Table":1,"Part number":"1008CS-270","R1(ohms)":8,"R2(ohms)":0.1,"C (pF)":0.185,"L (nH)":27,"k":0,"Upper\\nlimit\\n(MHz)":2500},{"Page":2,"Table":1,"Part number":"1008CS-330","R1(ohms)":9,"R2(ohms)":0.1,"C (pF)":0.117,"L (nH)":33,"k":0.0001,"Upper\\nlimit\\n(MHz)":2900},{"Page":2,"Table":1,"Part number":"1008CS-390","R1(ohms)":9,"R2(ohms)":0.2,"C (pF)":0.149,"L (nH)":39,"k":0.0001,"Upper\\nlimit\\n(MHz)":2300},{"Page":2,"Table":1,"Part number":"1008CS-470","R1(ohms)":9,"R2(ohms)":0.2,"C (pF)":0.118,"L (nH)":47,"k":0.0001,"Upper\\nlimit\\n(MHz)":2400},{"Page":2,"Table":1,"Part number":"1008CS-560","R1(ohms)":7,"R2(ohms)":0.2,"C (pF)":0.16,"L (nH)":56,"k":0.0001,"Upper\\nlimit\\n(MHz)":1900},{"Page":2,"Table":1,"Part number":"1008CS-680","R1(ohms)":6,"R2(ohms)":0.2,"C (pF)":0.137,"L (nH)":68,"k":0.0001,"Upper\\nlimit\\n(MHz)":1900},{"Page":2,"Table":1,"Part number":"1008CS-820","R1(ohms)":12,"R2(ohms)":0.2,"C (pF)":0.179,"L (nH)":81,"k":0.0001,"Upper\\nlimit\\n(MHz)":1500},{"Page":2,"Table":1,"Part number":"1008CS-101","R1(ohms)":13,"R2(ohms)":0.6,"C (pF)":0.135,"L (nH)":100,"k":0.0001,"Upper\\nlimit\\n(MHz)":1600},{"Page":2,"Table":1,"Part number":"1008CS-121","R1(ohms)":13,"R2(ohms)":0.6,"C (pF)":0.136,"L (nH)":120,"k":0.0002,"Upper\\nlimit\\n(MHz)":1400},{"Page":2,"Table":1,"Part number":"1008CS-151","R1(ohms)":14,"R2(ohms)":0.7,"C (pF)":0.136,"L (nH)":150,"k":0.0001,"Upper\\nlimit\\n(MHz)":1300},{"Page":2,"Table":1,"Part number":"1008CS-181","R1(ohms)":18,"R2(ohms)":0.8,"C (pF)":0.13,"L (nH)":180,"k":0.0001,"Upper\\nlimit\\n(MHz)":1200},{"Page":2,"Table":1,"Part number":"1008CS-221","R1(ohms)":18,"R2(ohms)":0.8,"C (pF)":0.147,"L (nH)":224,"k":0.0002,"Upper\\nlimit\\n(MHz)":1000},{"Page":2,"Table":1,"Part number":"1008CS-271","R1(ohms)":19,"R2(ohms)":0.9,"C (pF)":0.144,"L (nH)":265,"k":0.0002,"Upper\\nlimit\\n(MHz)":900},{"Page":2,"Table":1,"Part number":"1008CS-331","R1(ohms)":20,"R2(ohms)":1.1,"C (pF)":0.132,"L (nH)":330,"k":0.0003,"Upper\\nlimit\\n(MHz)":900},{"Page":2,"Table":1,"Part number":"1008CS-391","R1(ohms)":27,"R2(ohms)":1.1,"C (pF)":0.138,"L (nH)":380,"k":0.0003,"Upper\\nlimit\\n(MHz)":800},{"Page":2,"Table":2,"Part number":"1008CS-471","R1(ohms)":31,"R2(ohms)":1.2,"C (pF)":0.156,"L (nH)":465,"k":0.0004,"Upper\\nlimit\\n(MHz)":700},{"Page":2,"Table":2,"Part number":"1008CS-561","R1(ohms)":36,"R2(ohms)":1.3,"C (pF)":0.172,"L (nH)":550,"k":0.0005,"Upper\\nlimit\\n(MHz)":600},{"Page":2,"Table":2,"Part number":"1008CS-621","R1(ohms)":37,"R2(ohms)":1.4,"C (pF)":0.143,"L (nH)":615,"k":0.0006,"Upper\\nlimit\\n(MHz)":600},{"Page":2,"Table":2,"Part number":"1008CS-681","R1(ohms)":37,"R2(ohms)":1.5,"C (pF)":0.139,"L (nH)":665,"k":0.0006,"Upper\\nlimit\\n(MHz)":600},{"Page":2,"Table":2,"Part number":"1008CS-751","R1(ohms)":44,"R2(ohms)":1.5,"C (pF)":0.138,"L (nH)":740,"k":0.0007,"Upper\\nlimit\\n(MHz)":600},{"Page":2,"Table":2,"Part number":"1008CS-821","R1(ohms)":41,"R2(ohms)":1.6,"C (pF)":0.135,"L (nH)":810,"k":0.0008,"Upper\\nlimit\\n(MHz)":600},{"Page":2,"Table":2,"Part number":"1008CS-911","R1(ohms)":53,"R2(ohms)":1.7,"C (pF)":0.155,"L (nH)":895,"k":0.0008,"Upper\\nlimit\\n(MHz)":500},{"Page":2,"Table":2,"Part number":"1008CS-102","R1(ohms)":90,"R2(ohms)":1.8,"C (pF)":0.209,"L (nH)":975,"k":0.0008,"Upper\\nlimit\\n(MHz)":400},{"Page":2,"Table":2,"Part number":"1008CS-122","R1(ohms)":73,"R2(ohms)":2,"C (pF)":0.201,"L (nH)":1215,"k":0.001,"Upper\\nlimit\\n(MHz)":400},{"Page":2,"Table":2,"Part number":"1008CS-152","R1(ohms)":83,"R2(ohms)":2.3,"C (pF)":0.249,"L (nH)":1515,"k":0.0017,"Upper\\nlimit\\n(MHz)":300},{"Page":2,"Table":2,"Part number":"1008CS-182","R1(ohms)":85,"R2(ohms)":2.6,"C (pF)":0.278,"L (nH)":1825,"k":0.002,"Upper\\nlimit\\n(MHz)":300},{"Page":2,"Table":2,"Part number":"1008CS-222","R1(ohms)":84,"R2(ohms)":2.8,"C (pF)":0.258,"L (nH)":2200,"k":0.0025,"Upper\\nlimit\\n(MHz)":300},{"Page":2,"Table":2,"Part number":"1008CS-272","R1(ohms)":112,"R2(ohms)":3.2,"C (pF)":0.398,"L (nH)":2700,"k":0.0026,"Upper\\nlimit\\n(MHz)":200},{"Page":2,"Table":2,"Part number":"1008CS-332","R1(ohms)":134,"R2(ohms)":3.4,"C (pF)":0.285,"L (nH)":3300,"k":0.0033,"Upper\\nlimit\\n(MHz)":200},{"Page":2,"Table":2,"Part number":"1008CS-392","R1(ohms)":121,"R2(ohms)":3.6,"C (pF)":0.401,"L (nH)":3900,"k":0.0042,"Upper\\nlimit\\n(MHz)":200},{"Page":2,"Table":2,"Part number":"1008CS-472","R1(ohms)":163,"R2(ohms)":4,"C (pF)":0.381,"L (nH)":4600,"k":0.005,"Upper\\nlimit\\n(MHz)":200},{"Page":2,"Table":2,"Part number":"1008CS-562","R1(ohms)":64,"R2(ohms)":4,"C (pF)":5.304,"L (nH)":5250,"k":0.003,"Upper\\nlimit\\n(MHz)":100},{"Page":2,"Table":2,"Part number":"1008CS-682","R1(ohms)":148,"R2(ohms)":4.9,"C (pF)":1.357,"L (nH)":6800,"k":0.0035,"Upper\\nlimit\\n(MHz)":100},{"Page":2,"Table":2,"Part number":"1008CS-822","R1(ohms)":134,"R2(ohms)":6,"C (pF)":2.911,"L (nH)":8200,"k":0.0044,"Upper\\nlimit\\n(MHz)":100}]
+</script>
+
+<script>
+  function  plotThisFilter()
+ {
+   console.log("plotTheCoils")
+       filterMeta=[]
+
+
+filterMeta["columnKey"]="Part number";  
+     filterMeta["columnValue"]=["1008CS-221"]    
+         
+    returnl=filterMyData(spice1008cs,filterMeta)  
+    console.log(returnl)
+
+ for (thePindex = 0; thePindex < returnl.length; thePindex++) {     
+   
+     R2value=returnl[thePindex]["R2(ohms)"]  
+     R1value=returnl[thePindex]["R1(ohms)"]  
+     Lvalue=returnl[thePindex]["L (nH)"]  
+     Cvalue=returnl[thePindex]["C (pF)"]  
+     kvalue=returnl[thePindex]["k"]  
+     pnum=returnl[thePindex]["Part number"]
+     console.log("plotting: "+pnum)
+     titleText="$\\text{CoilID:"+pnum+"; "+"L=}"+ Lvalue+"\\text{ nH; C=}"+Cvalue+"\\text{ pF; } R_1="+R1value+"\\Omega; R_2="+R2value+"\\Omega;\\text{ k=}"+kvalue+"$"
+              
+    symbolList=[];colorList=[];shapesL= []; annotationList=[] 
+    title= {text: titleText, 	font: {family: 'Arial Black',size: 16},xref: 'paper',x: 0.5,xanchor: 'center',y: 0.96,yanchor: 'bottom'}
+    PlotMeta=[];PlotMeta["shapes"]=shapesL;PlotMeta["title"]=title;PlotMeta['typex']='log';PlotMeta['typey']='log'
+    
+    PlotMeta["xexponentformat"]= "SI"
+    PlotMeta["xticksuffix"]= "Hz"
+    PlotMeta["xautorange"]=true
+    //PlotMeta["xtickformat"]=   "0.f"
+    
+    PlotMeta["yexponentformat"]= "SI"
+    PlotMeta["yticksuffix"]= ""
+    PlotMeta["yautorange"]=true
+    //PlotMeta["ytickformat"]=   "0.f"
+    
+     dataT = [];
+
+   var fValues0= math.range(5,8.1, 0.1).toArray() 
+   var fValues= fValues0.map(x=>  math.pow(10,x))
+   for (i = 1; i < 11; i++) {  
+      theresf=9.1*i*math.pow(10,6)
+      fValues.push(theresf);
+      thecolor='rgb(255, 0, 0)'
+      if([1,5].includes(i)){ thecolor='rgb(0, 255, 0)'}
+       if([1,2,4,5,6,10].includes(i)){
+        shapesL.push(  {
+        type: 'line',
+        yref: 'paper',
+        y1: 0.8,y0: 0,
+        x0: theresf,x1: theresf,
+        line:{
+            color: thecolor,
+            width: 2,
+            dash:'dot'
+        }
+    })
+    
+    annotationList.push(
+          {
+        yref: 'paper',
+        x:math.log10(theresf),
+        xanchor: 'center',
+        y: 0.8,
+        yanchor: 'bottom',
+        text: (math.round(theresf/100000)/10)+"MHz",
+         textangle:-90,
+         showarrow: false,
+                // arrowhead: 7,
+                  ax: 0,                ay: -20
+       
+      }
+    )
+   }
+   
+      
+  }
+    y1values=fValues.map(x=>   R1value)
+    y2values=fValues.map(x=>   R2value)
+    Lyvalues=fValues.map(x=>   2*math.PI* Lvalue*x*math.pow(10,-9))
+    Cyvalues=fValues.map(x=>   1/(2*math.PI* Cvalue*x*math.pow(10,-12))  )
+     
+     
+     kyvalues=fValues.map(x=>    kvalue*math.pow(x,0.5))
+      
+    trace = { x: fValues, y:y1values, name: "R1", mode: 'lines', line: { width: 2 }, marker: { size: 8	}}
+    trace2 = { x: fValues, y:y2values, name: "R2", mode: 'lines', line: { width: 2 }, marker: { size: 8	}}
+    traceL = { x: fValues, y:Lyvalues, name: "L", mode: 'lines', line: { width: 2 }, marker: { size: 8	}}
+    traceC = { x: fValues, y:Cyvalues, name: "C", mode: 'lines', line: { width: 2 }, marker: { size: 8	}}
+    tracek = { x: fValues, y:kyvalues, name: "Rvar", mode: 'lines', line: { width: 2 }, marker: { size: 8	}}
+    
+   ;dataT.push(trace);dataT.push(trace2);dataT.push(traceL);dataT.push(traceC);dataT.push(tracek)//,yaxis: 'y2'
+
+    PlotMeta["annotations"]=annotationList;
+    PlotMeta["lorientation"]="h";  PlotMeta["legendposy"]="0.95";  PlotMeta["legendposx"]="0.35"
+    PlotMeta["xName"] = "$\\Large{f\\text{(Hz)}}$"; PlotMeta["yName"] = "$\\Large{|Z|}\\Large{(\\Omega)}$"
+    PlotMeta["data"] = dataT; PlotMeta["divid"] = "autoCoilPlot"+thePindex
+    PlotMeta["wheight"] = 400;    //PlotMeta["y2title"] = "$\\Large{\\text{Gain}}$"
+
+
+ const newDiv = document.createElement("div");
+ newDiv.setAttribute('id',"autoCoilPlot"+thePindex);
+newDiv.setAttribute('class',"plotitem");
+
+ 
+
+
+  // add the newly created element and its content into the DOM
+  document.getElementById("plotsCont").appendChild( newDiv);
+
+   genplotter(PlotMeta)
+/////////////////////////////////////////////////////////////////
+  }  
+        
+        
+        
+ }
+ 
+</script>
+
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css" />  
+<script src="./jsfiles/plotly-1.35.2.min.js"></script>
+<script src="./jsfiles/math602.js"></script>
+
+
+
+
+
+
+
+<div id="roots2" style="margin-top: 0px"></div> 
+
+<div id="plotsCont">
+
+</div>
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js" integrity="sha512-l0v2H6W8xb2KuUbu6MZALJCh5fAuR1wz0HQPF6E8aw0s9InT2YYHH3baPYDfONQQi+EEq2swUr0Y4GwyJVy/pQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+    window.MathJax = {
+      extensions: ["tex2jax.js"],
+      TeX: {
+        extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js", "action.js"]
+      },
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    };
+</script>
+
+
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG">
+</script>
+
+<script src="https://cdn.plot.ly/plotly-2.8.3.min.js"></script>
+
+
+    
+<script>
+  $('.tooltipped').tooltipster(
+{
+  animation: 'fade',
+  animationDuration:10,
+   delay: 500,
+   touchDevices: false,
+   trigger: 'hover',
+   onlyOne: true,
+   interactiveTolerance: 1,
+   theme: 'tooltipster-noir',
+   speed: 500,
+   interactive: true,
+   contentAsHTML: true
+}
+ );
+
+</script>   
+
+
+<script>
+argsIn=[]
+argsIn["modeIn"]=0
+
+argsIn["transferF_V"]=5
+argsIn["plotO_V"]=1
+argsIn["R_inputV"]=1
+argsIn["R_inputLV"]=2.6
+argsIn["L_inputV"]=390
+argsIn["C_inputV"]=208
+//freqResPlotter(argsIn)
+plotThisFilter()
+</script>
+
+</body>
+</html>
